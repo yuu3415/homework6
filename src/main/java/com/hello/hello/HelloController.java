@@ -10,7 +10,7 @@ public class HelloController {
 
     @GetMapping("/hello")
 
-    public static void main(String[] args) {
+    public static List<Anime> getAnimes() {
 
         List<Anime> animelist = List.of(
                 new Anime(1, "鬼滅の刃", "バトル"),
@@ -18,9 +18,5 @@ public class HelloController {
                 new Anime(3, "ニセコイ", "恋愛"));
 
         return animelist;
-
-        for (Anime anime : animelist) {
-            return "このアニメの名前は" + anime.getName() + "でジャンルは" + anime.getCategory() + "です。";
-        }
     }
 }
